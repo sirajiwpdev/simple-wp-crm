@@ -189,8 +189,9 @@ function swc_render_leads_dashboard_widget() {
 
     // Export Button
     echo '<p><a href="' . admin_url('?swc_export_leads=1') . '" class="button button-primary">Export Leads to CSV</a></p>';
-    // pai chart
-    echo '<canvas id="swcrm_leads_chart" width="400" height="200"></canvas>';
+    // pie chart
+    echo '<canvas id="swcrm_leads_chart" style="max-width: 400px; max-height: 250px;"></canvas>';
+
 
 }
 
