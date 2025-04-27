@@ -82,7 +82,7 @@ Available inside Elementor editor as:
 ![Lead Form](screenshot-lead-form.png)
 
 ### 4. Elementor Widget - Filter by Status
-![Filter Status Dropdown](filter-screenshots.png)
+![Filter Status Dropdown](screenshot-filter.png)
 
 ### 5. Elementor Widget - Style Controls (Color, Typography)
 ![Style Controls](screenshot-leads-style-color.png)
