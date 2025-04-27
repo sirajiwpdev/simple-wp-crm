@@ -273,3 +273,16 @@ function swc_enqueue_dashboard_chart_js($hook) {
         'counts' => $counts
     ]);
 }
+
+
+/**
+ * Register Lead List Widget with Elementor.
+ *
+ * @param \Elementor\Widgets_Manager $widgets_manager Elementor widgets manager.
+ */
+function swc_register_lead_list_widget( $widgets_manager ) {
+    require_once __DIR__ . '/widgets/class-lead-list-widget.php';
+
+    $widgets_manager->register( new \Lead_List_Widget() );
+}
+add_action( 'elementor/widgets/register', 'swc_register_lead_list_widget' );
