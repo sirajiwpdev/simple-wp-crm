@@ -2,12 +2,16 @@
 
 A lightweight CRM plugin for WordPress with:
 
-- ✅ Custom Post Type for Leads
+- ✅ Custom Post Type (CPT) for Leads
 - ✅ Meta Boxes for Email, Phone, Status
-- ✅ REST API with filtering (`?status=won`)
-- ✅ Admin Dashboard Overview Widget
-- ✅ CSV Export Button
-- ✅ Pie Chart via Chart.js (visual analytics)
+- ✅ REST API with status filtering (`?status=won`)
+- ✅ Admin Dashboard Overview Widget (Total, Status Count)
+- ✅ CSV Export Button from Dashboard
+- ✅ Dynamic Chart with Chart.js
+- ✅ Elementor Integration: Display Leads on frontend
+- ✅ Filter Leads by Status inside Elementor
+- ✅ Control number of Leads to show
+- ✅ Full Style Controls (Typography, Color, Padding)
 
 ---
 
@@ -16,35 +20,53 @@ A lightweight CRM plugin for WordPress with:
 | Feature         | Details                                     |
 |-----------------|---------------------------------------------|
 | CPT             | Registers a `lead` post type with title, content |
-| Meta Fields     | Email, Phone, and Status stored in postmeta |
-| REST API        | Endpoint at `/wp-json/simple-crm/v1/leads` with status filtering |
-| Dashboard Widget| Shows total & status count, includes chart & export |
-| CSV Export      | Exports leads to CSV from dashboard |
-| Chart.js        | Pie chart of leads by status (inside dashboard widget) |
+| Meta Fields     | Email, Phone, Status (stored in postmeta)   |
+| REST API        | Endpoint at `/wp-json/simple-crm/v1/leads` (with filter support) |
+| Dashboard Widget| Shows total leads + statuses + CSV export |
+| CSV Export      | Download all leads data as CSV |
+| Chart.js        | Visual Pie Chart showing Lead Status overview |
+| Elementor Widget| Display dynamic Leads list on frontend, fully customizable |
 
 ---
 
 ## 🧪 How to Use
 
 1. Upload the plugin folder `simple-wp-crm` to `/wp-content/plugins/`
-2. Activate the plugin via WP Admin > Plugins
+2. Activate the plugin via WP Admin → Plugins
 3. Go to **Dashboard → Leads Overview** to:
-   - View stats
-   - Export to CSV
+   - View lead stats
+   - Export CSV
    - See pie chart
-4. Visit **Leads** menu to manage lead entries
+4. Go to **Leads** → Add New to manage lead entries
+5. In Elementor, search for "**Lead List Widget**" to show leads dynamically:
+   - Filter by Status (New, Contacted, Won, Lost)
+   - Set number of leads to display
+   - Style text, background, padding responsively
 
 ---
 
-## 🔌 REST API Example
+## 🔌 REST API Endpoints
 
-Get all leads:
+- Get all leads:
 GET /wp-json/simple-crm/v1/leads
 
-Get leads by status:
-
+- Get leads by status:
 GET /wp-json/simple-crm/v1/leads?status=won
 
+
+---
+
+## 🧩 Elementor Integration
+
+This plugin now includes a fully functional Elementor Widget:
+
+- Display dynamic Leads list
+- Filter by Lead Status (New, Contacted, Won, Lost)
+- Control number of leads displayed
+- Full style controls (Typography, Color, Padding)
+
+Available inside Elementor editor as:  
+**"Lead List Widget"**
 
 ---
 
@@ -53,29 +75,37 @@ GET /wp-json/simple-crm/v1/leads?status=won
 ### 1. Dashboard Widget (Chart, Stats, Export)
 ![Dashboard](screenshot-dashboard.png)
 
-### 2. Lead List (CPT Admin)
+### 2. Leads List in Admin
 ![Leads List](screenshot-leads-list.png)
 
-### 3. Lead Entry Form (Meta Fields)
+### 3. Lead Entry Form with Custom Meta
 ![Lead Form](screenshot-lead-form.png)
+
+### 4. Elementor Widget - Filter by Status
+![Filter Status Dropdown](filter-screenshots.png)
+
+### 5. Elementor Widget - Style Controls (Color, Typography)
+![Style Controls](screenshot-leads-style-color.png)
 
 ---
 
 ## 📁 Folder Structure
 
-simple-wp-crm/ ├── js/ │ └── swcrm-dashboard-chart.js ├── simple-wp-crm.php └── README.md
+simple-wp-crm/ ├── js/ │ └── swcrm-dashboard-chart.js ├── widgets/ │ └── class-lead-list-widget.php ├── simple-wp-crm.php ├── README.md ├── screenshot-dashboard.png ├── screenshot-leads-list.png ├── screenshot-lead-form.png ├── filter-screenshots.png ├── screenshot-leads-style-color.png
 
 
 ---
 
 ## 👨‍💻 Author
 
-Created by [Siraji](https://github.com/sirajiwpdev)
+Built and maintained by [Siraji](https://github.com/sirajiwpdev)
 
-If you found this helpful, ⭐ star the repo or share it!
+Feel free to ⭐ star the repo if you find it useful or contribute!
 
 ---
 
 ## 📜 License
 
-GPLv2 or later — open-source, modify as needed.
+GPLv2 or later — free for modification and distribution under GPL.
+
+---
