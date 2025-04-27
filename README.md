@@ -73,19 +73,17 @@ Available inside Elementor editor as:
 ## 📷 Screenshots
 
 ### 1. Dashboard Widget (Chart, Stats, Export)
-![Dashboard](screenshot-dashboard.png)
+![Dashboard](screenshot-1.png)
 
 ### 2. Leads List in Admin
-![Leads List](screenshot-leads-list.png)
+![Leads List](screenshot-2.png)
 
 ### 3. Lead Entry Form with Custom Meta
-![Lead Form](screenshot-lead-form.png)
+![Lead Form](screenshot-3.png)
 
 ### 4. Elementor Widget - Filter by Status
-![Filter Status Dropdown](screenshot-filter.png)
+![Filter Status Dropdown](screenshot-4.png)
 
-### 5. Elementor Widget - Style Controls (Color, Typography)
-![Style Controls](screenshot-leads-style-color.png)
 
 ---
 
